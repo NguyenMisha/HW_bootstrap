@@ -1,0 +1,98 @@
+                @import '_variables';
+                body {
+                    background: radial-gradient(ellipse at center, #a974ad 0%, #4a4885 52%, #161725 100%) no-repeat;
+                    height: 100vh;
+                }
+                
+                $base-size: 16px;
+                @mixin font-size ($target, $context: $base-size) {
+                    font-size: ($target/$context) * 1rem;
+                }
+                
+                .header {
+                    h1 {
+                        @include font-size(35px);
+                        line-height: 47px;
+                        &::after {
+                            content: '';
+                            width: 150px;
+                            height: 2px;
+                            position: absolute;
+                            background: #70dddb;
+                            left: calc(50% - 75px);
+                        }
+                    }
+                    span {
+                        @include font-size(15px);
+                        color: $color-gray;
+                        display: block;
+                    }
+                }
+                
+                .logo {
+                    position: relative;
+                    margin-bottom: 60px;
+                    // &::before {
+                    //     position: absolute;
+                    //     content: '';
+                    //     display: block;
+                    //     clear: both;
+                    //     background: url(../images/logo.svg) no-repeat;
+                    //     width: 77px;
+                    //     height: 58px;
+                    // }
+                }
+                
+                .navigation {
+                    margin-bottom: 60px;
+                    .nav-pills .nav-link.active,
+                    .show>.nav-link {
+                        color: $color-yellow;
+                        background-color: #ff3150;
+                        border-radius: 7px;
+                    }
+                    .nav-link {
+                        @include font-size(15px);
+                        color: $color-gray;
+                        &:hover {
+                            color: $color-yellow;
+                            background-color: #ff3150;
+                            border-radius: 7px;
+                        }
+                    }
+                }
+                
+                .portfolio .item {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    overflow: hidden;
+                    text-align: center;
+                    img {
+                        margin-bottom: 28px;
+                        // padding-right: 20px;
+                        width: 270px;
+                        height: 200px;
+                        align-items: center;
+                    }
+                    img {
+                        object-fit: cover;
+                        display: block;
+                        // width: 100%;
+                        // height: inherit;
+                    }
+                }
+                
+                .bg-red {
+                    @include font-size(15px);
+                    color: $color-yellow;
+                    background: $bg-red;
+                    border: none;
+                    &:hover,
+                    &:focus {
+                        color: $color-yellow;
+                        background-color: $bg-btn;
+                        outline: none !important;
+                        box-shadow: none;
+                    }
+                }
