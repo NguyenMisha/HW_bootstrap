@@ -1,9 +1,8 @@
-@import '_variables';
 body {
     // background: radial-gradient(ellipse at center, #a974ad 0%, #4a4885 52%, #161725 100%) no-repeat;
     // height: 100vh;
-    font-family: $font-family-base;
-    font-weight: $font-weight-base;
+    // font-family: $font-family-base;
+    // font-weight: $font-weight-base;
 }
 
 $base-size: 16px;
@@ -52,7 +51,7 @@ $base-size: 16px;
     .nav-pills .nav-link.active,
     .show>.nav-link {
         color: $color-yellow;
-        background-color: #ff3150;
+        background-color: $bg-red;
         border-radius: 10px;
     }
     .nav-link {
@@ -62,7 +61,7 @@ $base-size: 16px;
         margin-right: 15px;
         &:hover {
             color: $color-yellow;
-            background-color: #ff3150;
+            background-color: $bg-red;
             border-radius: 10px;
         }
     }
