@@ -1,10 +1,4 @@
-body {
-    // background: radial-gradient(ellipse at center, #a974ad 0%, #4a4885 52%, #161725 100%) no-repeat;
-    // height: 100vh;
-    // font-family: $font-family-base;
-    // font-weight: $font-weight-base;
-}
-
+@import '_variables';
 $base-size: 16px;
 @mixin font-size ($target, $context: $base-size) {
     font-size: ($target/$context) * 1rem;
@@ -71,10 +65,13 @@ $base-size: 16px;
     overflow: hidden;
     img {
         margin-bottom: 28px;
-        width: 270px;
+        width: 100%;
         height: 200px;
         object-fit: cover;
         display: block;
+        @media (max-width: 575.98px) {
+            object-fit: none;
+        }
     }
 }
 
